@@ -1,0 +1,21 @@
+body {
+  background-color: violet;
+}
+
+.parent {
+  padding: 1rem;
+  background-color: aquamarine;
+  width: 300px;
+  height: 300px;
+  border: 2px solid black;
+  margin-top: 50px;
+  margin-left: 300px;
+  border-radius: 1rem;
+}
+
+.child {
+  background-color: cadetblue;
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+}
