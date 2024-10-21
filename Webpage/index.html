@@ -1,53 +1,75 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Improved Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="assign1.css">
 </head>
 
-<body class="bg-gray-100">
+<body>
+    <h1>Hello world</h1>
+    <div id="parent">
+        <button class="btn">Click me</button>
+    </div>
 
-    <!-- Main Page Header -->
-    <header class="">
-        <h1 class="">Header</h1>
-    </header>
+    <script>
+        const btn = document.getElementsByClassName("btn")[0];
+        const div = document.getElementById("parent");
 
-    <!-- Main Content -->
-    <main class="">
-        <table class="">
-            <tbody>
-                <!-- Main Header Row -->
-                <tr class="border border-gray-300">
-                    <td colspan="2" class="text-center p-4">
-                        <h2 class="text-2xl font-semibold">Main Header</h2>
-                    </td>
-                </tr>
+        btn.addEventListener("click", () => {
+            const input = document.createElement("input");
+            input.type = "number"; 
+            const Submit = document.createElement("button");
+            Submit.innerHTML = "Submit";
+            div.removeChild(btn);
+            div.appendChild(input);
+            div.appendChild(Submit);
 
-                <tr class="border border-gray-300">
-                    <td class="bg-gray-200 w-1/4 p-4">
-                        <h3 class="font-semibold">SideBar</h3>
-                        <p>Some sidebar content here.</p>
-                        <a href="/FSDCSEA/login.html" target="fr">login</a>
-                        <a href="/FSDCSEA/register.html" target="fr">Register</a>
-                    </td>
-                    <td class="p-4">
-                        <iframe src="free-photo-of-view-of-a-starry-night-sky-over-a-field-and-trees.jpeg" name="fr" frameborder="0" height="500rem" width="500rem"></iframe>
-                    </td>
-                </tr>
+            Submit.addEventListener("click", () => {
+                const numBulbs = parseInt(input.value); 
+                if (!isNaN(numBulbs) && numBulbs > 0) {
+                    div.innerHTML = ''; 
+                    const bulbContainer = document.createElement("div");
+                    bulbContainer.style.display = "flex";
+                    bulbContainer.style.gap = "10px"; 
 
-                <!-- Footer Row -->
-                <tr class="bg-gray-100 text-center border border-gray-300">
-                    <td colspan="2" class="p-4">
-                        <footer>Footer</footer>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </main>
+                    for (let i = 0; i < numBulbs; i++) {
+                        const div2 = document.createElement("div");
 
+                        const checkbox = document.createElement("input");
+                        checkbox.type = "checkbox";
+
+                        const image = document.createElement("img");
+                        image.src = "https://pics.clipartpng.com/Light_Bulb_PNG_Clip_Art-2102.png";
+                        image.style.height = "140px";
+                        image.style.width = "120px";
+
+                        checkbox.addEventListener("change", () => {
+                            if (checkbox.checked) {
+                                image.src = "https://pics.clipartpng.com/midle/Yellow_Light_Bulb_PNG_Clip_Art-2108.png"; 
+                            } else {
+                                image.src = "https://pics.clipartpng.com/Light_Bulb_PNG_Clip_Art-2102.png"; 
+                            }
+                        });
+
+                        div2.appendChild(checkbox);
+                        div2.appendChild(image);
+                        bulbContainer.appendChild(div2);
+                    }
+
+                    div.appendChild(bulbContainer); 
+                }
+            });
+        });
+
+
+
+
+    </script>
 </body>
 
 </html>
