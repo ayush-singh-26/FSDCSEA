@@ -1,23 +1,49 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 import Student from './Student'
 import Navbar from './Navbar'
+import image from "./../public/download.jpeg"
+import StudentState from './StudentState'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const data={
+    name: 'Ayush Singh',
+    dob: '26/09/2004',
+    roll_no: '2200320100048',
+    course: 'Computer science and Engineering',
+    image: image,
+  }
 
   return (
     <>
       <Navbar />
-      <Student
-        name={"Ayush singh"}
-        dob={"26/09/2004"}
-        roll_no={"2200320100048"}
-        course={"Computer science and Engineering"} />
+      <div className='component'>
+
+        <Student data={data}/>
+        <Student data={data}/>
+        <Student data={data}/>
+        <Student data={data}/>
+        {/* <Student
+          image={image}
+          name={"Ayush singh"}
+          dob={"26/09/2004"}
+          roll_no={"2200320100048"}
+          course={"Computer science and Engineering"}
+        />
+        */}
+
+      
+      </div>
+      <StudentState/>
     </>
   )
+
+}
+Student.defaultProps = {
+  college: 'ABES Engineering University'
 }
 
 export default App
