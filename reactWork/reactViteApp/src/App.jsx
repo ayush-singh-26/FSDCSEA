@@ -5,6 +5,8 @@ import Student from './Student'
 import Navbar from './Navbar'
 import image from "./../public/download.jpeg"
 import StudentState from './StudentState'
+import UseOfState from './UseOfState'
+import ImageManipulation from './ImageManipulation'
 
 
 function App() {
@@ -19,7 +21,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar />
       <div className='component'>
 
         <Student data={data}/>
@@ -33,11 +35,15 @@ function App() {
           roll_no={"2200320100048"}
           course={"Computer science and Engineering"}
         />
-        */}
 
       
       </div>
-      <StudentState/>
+      */}
+      {/* <StudentState/>  */}
+
+        {/* <UseOfState/> */}
+        <ImageManipulation/>
+
     </>
   )
 
