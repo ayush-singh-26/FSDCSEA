@@ -1,0 +1,26 @@
+[
+    {
+        "name":"ayush",
+        "roll":"2200320100048",
+        "branch":"CSE",
+        "college":"ABES Engineering College"
+    },
+    {
+        "name":"prasanna",
+        "roll":"2200320100049",
+        "branch":"CSE",
+        "college":"ABES Engineering College"
+    },
+    {
+        "name":"rahul",
+        "roll":"2200320100050",
+        "branch":"CSE",
+        "college":"ABES Engineering College"
+    },
+    {
+        "name":"shobha",
+        "roll":"2200320100051",
+        "branch":"CSE",
+        "college":"ABES Engineering College"
+    }
+]

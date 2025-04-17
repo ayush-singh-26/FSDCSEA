@@ -1,0 +1,16 @@
+{
+  "name": "http_work",
+  "version": "1.0.0",
+  "main": "http-server.js",
+  "type": "module",
+  "scripts": {
+    "start" : "nodemon fetchApi.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
